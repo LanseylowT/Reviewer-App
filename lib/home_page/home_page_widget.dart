@@ -1,5 +1,6 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -155,6 +156,41 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0, 0.8),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                  child: Container(
+                    width: double.infinity,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Color(0x00FFFFFF),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Get Started!',
+                      options: FFButtonOptions(
+                        width: 130,
+                        height: 40,
+                        color: Color(0xFF499D2F),
+                        textStyle: FlutterFlowTheme.of(context).title3.override(
+                              fontFamily: 'Poppins',
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
                   ),
                 ),
               ),
