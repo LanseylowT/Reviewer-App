@@ -170,8 +170,17 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed(
+                          'Registration1',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 300),
+                            ),
+                          },
+                        );
                       },
                       text: 'Get Started!',
                       options: FFButtonOptions(
