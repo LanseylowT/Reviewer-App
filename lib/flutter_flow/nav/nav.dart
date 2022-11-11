@@ -95,6 +95,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 registrationRef: params.getParam('registrationRef',
                     ParamType.DocumentReference, false, 'users'),
               ),
+            ),
+            FFRoute(
+              name: 'Registration3',
+              path: 'registration3',
+              builder: (context, params) => Registration3Widget(
+                registrationRef: params.getParam('registrationRef',
+                    ParamType.DocumentReference, false, 'users'),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

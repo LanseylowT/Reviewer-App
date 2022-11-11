@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Registration2Widget extends StatefulWidget {
-  const Registration2Widget({
+class Registration3Widget extends StatefulWidget {
+  const Registration3Widget({
     Key? key,
     this.registrationRef,
   }) : super(key: key);
@@ -16,19 +16,25 @@ class Registration2Widget extends StatefulWidget {
   final DocumentReference? registrationRef;
 
   @override
-  _Registration2WidgetState createState() => _Registration2WidgetState();
+  _Registration3WidgetState createState() => _Registration3WidgetState();
 }
 
-class _Registration2WidgetState extends State<Registration2Widget> {
+class _Registration3WidgetState extends State<Registration3Widget> {
   TextEditingController? textController1;
+
+  late bool passwordVisibility1;
   TextEditingController? textController2;
+
+  late bool passwordVisibility2;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
     textController1 = TextEditingController();
+    passwordVisibility1 = false;
     textController2 = TextEditingController();
+    passwordVisibility2 = false;
   }
 
   @override
@@ -125,7 +131,7 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      'Create Your\nUsername',
+                      'Create Your\nPassword',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).title3.override(
                             fontFamily: 'Poppins',
@@ -171,7 +177,7 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                       FFButtonWidget(
                         onPressed: () async {
                           context.pushNamed(
-                            'Registration3',
+                            'SplashScreen',
                             extra: <String, dynamic>{
                               kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
@@ -257,7 +263,7 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 10, 15, 0),
                         child: Image.asset(
-                          'assets/images/Person.png',
+                          'assets/images/Lock.png',
                           width: 30,
                           height: 40,
                           fit: BoxFit.fill,
@@ -267,9 +273,9 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                         child: TextFormField(
                           controller: textController1,
                           autofocus: true,
-                          obscureText: false,
+                          obscureText: !passwordVisibility1,
                           decoration: InputDecoration(
-                            hintText: 'Your Full Name',
+                            hintText: 'Create Password',
                             hintStyle: FlutterFlowTheme.of(context).bodyText2,
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -311,13 +317,27 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                                 topRight: Radius.circular(4.0),
                               ),
                             ),
+                            suffixIcon: InkWell(
+                              onTap: () => setState(
+                                () =>
+                                    passwordVisibility1 = !passwordVisibility1,
+                              ),
+                              focusNode: FocusNode(skipTraversal: true),
+                              child: Icon(
+                                passwordVisibility1
+                                    ? Icons.visibility_outlined
+                                    : Icons.visibility_off_outlined,
+                                color: Color(0xFF757575),
+                                size: 22,
+                              ),
+                            ),
                           ),
                           style:
                               FlutterFlowTheme.of(context).subtitle2.override(
                                     fontFamily: 'Poppins',
                                     letterSpacing: 1,
                                   ),
-                          keyboardType: TextInputType.name,
+                          keyboardType: TextInputType.visiblePassword,
                         ),
                       ),
                     ],
@@ -342,7 +362,7 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 10, 15, 0),
                         child: Image.asset(
-                          'assets/images/Person.png',
+                          'assets/images/Lock.png',
                           width: 30,
                           height: 40,
                           fit: BoxFit.fill,
@@ -352,9 +372,9 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                         child: TextFormField(
                           controller: textController2,
                           autofocus: true,
-                          obscureText: false,
+                          obscureText: !passwordVisibility2,
                           decoration: InputDecoration(
-                            hintText: 'Username',
+                            hintText: 'Repeat yout Password',
                             hintStyle: FlutterFlowTheme.of(context).bodyText2,
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -396,13 +416,27 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                                 topRight: Radius.circular(4.0),
                               ),
                             ),
+                            suffixIcon: InkWell(
+                              onTap: () => setState(
+                                () =>
+                                    passwordVisibility2 = !passwordVisibility2,
+                              ),
+                              focusNode: FocusNode(skipTraversal: true),
+                              child: Icon(
+                                passwordVisibility2
+                                    ? Icons.visibility_outlined
+                                    : Icons.visibility_off_outlined,
+                                color: Color(0xFF757575),
+                                size: 22,
+                              ),
+                            ),
                           ),
                           style:
                               FlutterFlowTheme.of(context).subtitle2.override(
                                     fontFamily: 'Poppins',
                                     letterSpacing: 1,
                                   ),
-                          keyboardType: TextInputType.name,
+                          keyboardType: TextInputType.visiblePassword,
                         ),
                       ),
                     ],
