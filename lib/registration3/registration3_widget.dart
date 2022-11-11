@@ -334,8 +334,9 @@ class _Registration3WidgetState extends State<Registration3Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'SF Pro Display',
                                     letterSpacing: 1,
+                                    useGoogleFonts: false,
                                   ),
                           keyboardType: TextInputType.visiblePassword,
                         ),
@@ -433,8 +434,9 @@ class _Registration3WidgetState extends State<Registration3Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'SF Pro Display',
                                     letterSpacing: 1,
+                                    useGoogleFonts: false,
                                   ),
                           keyboardType: TextInputType.visiblePassword,
                         ),

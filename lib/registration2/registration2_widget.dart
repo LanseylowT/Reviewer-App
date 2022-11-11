@@ -314,8 +314,9 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'SF Pro Display',
                                     letterSpacing: 1,
+                                    useGoogleFonts: false,
                                   ),
                           keyboardType: TextInputType.name,
                         ),
@@ -399,8 +400,9 @@ class _Registration2WidgetState extends State<Registration2Widget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'SF Pro Display',
                                     letterSpacing: 1,
+                                    useGoogleFonts: false,
                                   ),
                           keyboardType: TextInputType.name,
                         ),
