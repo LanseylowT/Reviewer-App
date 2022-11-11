@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class Registration1Widget extends StatefulWidget {
+  const Registration1Widget({Key? key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _Registration1WidgetState createState() => _Registration1WidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _Registration1WidgetState extends State<Registration1Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -25,6 +25,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Stack(
             children: [
+              Align(
+                alignment: AlignmentDirectional(0, 0.8),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 400, 0, 0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(0),
+                      bottomRight: Radius.circular(0),
+                      topLeft: Radius.circular(100),
+                      topRight: Radius.circular(100),
+                    ),
+                    child: Image.asset(
+                      'assets/images/Register_Picture.png',
+                      width: 500,
+                      height: 400,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
               Image.asset(
                 'assets/images/Ellipses.png',
                 width: 200,
@@ -39,7 +59,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
-                        color: Color(0x00FFFFFF),
+                        color: Color(0x00101213),
                       ),
                       child: Align(
                         alignment: AlignmentDirectional(-0.75, -0.05),
@@ -47,12 +67,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             child: Text(
                           '9:40',
                           textAlign: TextAlign.center,
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Poppins',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
                         )),
                       ),
                     ),
@@ -73,8 +93,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           children: [
                             Icon(
                               Icons.signal_cellular_alt,
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color: FlutterFlowTheme.of(context).primaryText,
                               size: 24,
                             ),
                             Icon(
@@ -97,30 +116,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ],
               ),
               Align(
-                alignment: AlignmentDirectional(0, -0.35),
-                child: Container(
-                  width: 250,
-                  height: 250,
-                  constraints: BoxConstraints(
-                    maxWidth: 170,
-                    maxHeight: 170,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Color(0x00FFFFFF),
-                  ),
-                  child: Image.asset(
-                    'assets/images/Person_with_Phone.png',
-                    width: 170,
-                    height: 160,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(0.15, 0.4),
+                alignment: AlignmentDirectional(0, -0.2),
                 child: Container(
                   width: double.infinity,
-                  height: 250,
+                  height: 100,
                   decoration: BoxDecoration(
                     color: Color(0x00FFFFFF),
                   ),
@@ -128,32 +127,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        'Get things done with REVIEWZ',
+                        'Welcome\nOnboard!',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).title3.override(
                               fontFamily: 'Poppins',
                               color:
                                   FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 30,
                             ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0.1),
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
-                          child: Text(
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt facilisis congue turpis porta arcu nascetur ut porttitor. Diam sed gravida ultrices donec. Diam sed nunc ipsum, nisi. Sodales sed aliquam habitant pellentesque leo euismod sed viverra diam.',
-                            textAlign: TextAlign.center,
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Acid Grotesk',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBtnText,
-                                      fontSize: 18,
-                                      useGoogleFonts: false,
-                                    ),
-                          ),
-                        ),
                       ),
                     ],
                   ),

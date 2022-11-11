@@ -29,17 +29,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => HomePageWidget(),
+      errorBuilder: (context, _) => SplashScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => HomePageWidget(),
+          builder: (context, _) => SplashScreenWidget(),
           routes: [
             FFRoute(
-              name: 'HomePage',
-              path: 'homePage',
-              builder: (context, params) => HomePageWidget(),
+              name: 'SplashScreen',
+              path: 'splashScreen',
+              builder: (context, params) => SplashScreenWidget(),
+            ),
+            FFRoute(
+              name: 'Registration1',
+              path: 'registration1',
+              builder: (context, params) => Registration1Widget(),
+            ),
+            FFRoute(
+              name: 'Registration2',
+              path: 'registration2',
+              builder: (context, params) => Registration2Widget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
