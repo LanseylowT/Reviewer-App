@@ -111,6 +111,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 registrationRef: params.getParam('registrationRef',
                     ParamType.DocumentReference, false, 'users'),
               ),
+            ),
+            FFRoute(
+              name: 'Dashboard1Scratch',
+              path: 'dashboard1Scratch',
+              builder: (context, params) => Dashboard1ScratchWidget(
+                registrationRef: params.getParam('registrationRef',
+                    ParamType.DocumentReference, false, 'users'),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
