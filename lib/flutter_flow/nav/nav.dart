@@ -103,6 +103,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 registrationRef: params.getParam('registrationRef',
                     ParamType.DocumentReference, false, 'users'),
               ),
+            ),
+            FFRoute(
+              name: 'Dashboard1',
+              path: 'dashboard1',
+              builder: (context, params) => Dashboard1Widget(
+                registrationRef: params.getParam('registrationRef',
+                    ParamType.DocumentReference, false, 'users'),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
