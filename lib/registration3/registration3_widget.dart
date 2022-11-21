@@ -144,7 +144,7 @@ class _Registration3WidgetState extends State<Registration3Widget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(-0.82, 0.7),
+              alignment: AlignmentDirectional(-0.85, 0.7),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 20,
@@ -162,7 +162,7 @@ class _Registration3WidgetState extends State<Registration3Widget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.85, 0.7),
+              alignment: AlignmentDirectional(1, 0.7),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                 child: Container(
@@ -177,7 +177,7 @@ class _Registration3WidgetState extends State<Registration3Widget> {
                       FFButtonWidget(
                         onPressed: () async {
                           context.pushNamed(
-                            'SplashScreen',
+                            'DashboardHome',
                             extra: <String, dynamic>{
                               kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,

@@ -115,7 +115,9 @@ class _Dashboard1WidgetState extends State<Dashboard1Widget> {
                       Align(
                         alignment: AlignmentDirectional(0, -1.48),
                         child: FlutterFlowDropDown<String>(
-                          options: ['Quiz Review'],
+                          initialOption: dropDownValue ??= '',
+                          options: ['Quiz Review', 'Review', 'Settings'],
+                          optionLabels: ['Quiz Review', 'Review', 'Settings'],
                           onChanged: (val) =>
                               setState(() => dropDownValue = val),
                           width: double.infinity,
@@ -255,141 +257,129 @@ class _Dashboard1WidgetState extends State<Dashboard1Widget> {
                         ),
                         child: Stack(
                           children: [
-                            Column(
+                            Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Align(
-                                  alignment: AlignmentDirectional(0, 0.65),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        'CCE109:',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Manrope',
-                                              color: Color(0xFF2F9D96),
-                                            ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 10, 0),
-                                        child: LinearPercentIndicator(
-                                          percent: 1,
-                                          width: 120,
-                                          lineHeight: 12,
-                                          animation: true,
-                                          progressColor: Color(0xFF0077B6),
-                                          backgroundColor: Color(0xFFADE8F4),
-                                          padding: EdgeInsets.zero,
-                                        ),
-                                      ),
-                                      Text(
-                                        '100/100',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              fontSize: 10,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      'CCE109:',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Manrope',
+                                            color: Color(0xFF2F9D96),
+                                          ),
+                                    ),
+                                    Text(
+                                      'GE2:',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Manrope',
+                                            color: Color(0xFF2F9D96),
+                                          ),
+                                    ),
+                                    Text(
+                                      'GE4:',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Manrope',
+                                            color: Color(0xFF2F9D96),
+                                          ),
+                                    ),
+                                  ],
                                 ),
-                                Align(
-                                  alignment: AlignmentDirectional(0, 0.65),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        'GE2:',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Manrope',
-                                              color: Color(0xFF2F9D96),
-                                            ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 10, 0),
+                                      child: LinearPercentIndicator(
+                                        percent: 1,
+                                        width: 120,
+                                        lineHeight: 12,
+                                        animation: true,
+                                        progressColor: Color(0xFF0077B6),
+                                        backgroundColor: Color(0xFFADE8F4),
+                                        padding: EdgeInsets.zero,
                                       ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 15, 0),
-                                        child: LinearPercentIndicator(
-                                          percent: 0.2,
-                                          width: 120,
-                                          lineHeight: 12,
-                                          animation: true,
-                                          progressColor: Color(0xFF0077B6),
-                                          backgroundColor: Color(0xFFADE8F4),
-                                          padding: EdgeInsets.zero,
-                                        ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 15, 0),
+                                      child: LinearPercentIndicator(
+                                        percent: 0.2,
+                                        width: 120,
+                                        lineHeight: 12,
+                                        animation: true,
+                                        progressColor: Color(0xFF0077B6),
+                                        backgroundColor: Color(0xFFADE8F4),
+                                        padding: EdgeInsets.zero,
                                       ),
-                                      Text(
-                                        '20/100',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .lineColor,
-                                              fontSize: 10,
-                                            ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 15, 0),
+                                      child: LinearPercentIndicator(
+                                        percent: 1,
+                                        width: 120,
+                                        lineHeight: 12,
+                                        animation: true,
+                                        progressColor: Color(0xFF0077B6),
+                                        backgroundColor: Color(0xFFADE8F4),
+                                        padding: EdgeInsets.zero,
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
-                                Align(
-                                  alignment: AlignmentDirectional(0, 0.65),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        'GE4:',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Manrope',
-                                              color: Color(0xFF2F9D96),
-                                            ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 15, 0),
-                                        child: LinearPercentIndicator(
-                                          percent: 1,
-                                          width: 120,
-                                          lineHeight: 12,
-                                          animation: true,
-                                          progressColor: Color(0xFF0077B6),
-                                          backgroundColor: Color(0xFFADE8F4),
-                                          padding: EdgeInsets.zero,
-                                        ),
-                                      ),
-                                      Text(
-                                        '100/100',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .lineColor,
-                                              fontSize: 10,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      '100/100',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            fontSize: 10,
+                                          ),
+                                    ),
+                                    Text(
+                                      '20/100',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: FlutterFlowTheme.of(context)
+                                                .lineColor,
+                                            fontSize: 10,
+                                          ),
+                                    ),
+                                    Text(
+                                      '100/100',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: FlutterFlowTheme.of(context)
+                                                .lineColor,
+                                            fontSize: 10,
+                                          ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

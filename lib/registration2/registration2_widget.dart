@@ -138,7 +138,7 @@ class _Registration2WidgetState extends State<Registration2Widget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(-0.82, 0.7),
+              alignment: AlignmentDirectional(-0.85, 0.7),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 20,
@@ -156,7 +156,7 @@ class _Registration2WidgetState extends State<Registration2Widget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.85, 0.7),
+              alignment: AlignmentDirectional(1, 0.7),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                 child: Container(

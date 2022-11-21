@@ -113,9 +113,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
-              name: 'Dashboard1Scratch',
-              path: 'dashboard1Scratch',
-              builder: (context, params) => Dashboard1ScratchWidget(
+              name: 'DashboardHome',
+              path: 'dashboardHome',
+              builder: (context, params) => DashboardHomeWidget(
+                registrationRef: params.getParam('registrationRef',
+                    ParamType.DocumentReference, false, 'users'),
+              ),
+            ),
+            FFRoute(
+              name: 'DashboardSettings',
+              path: 'dashboardSettings',
+              builder: (context, params) => DashboardSettingsWidget(
                 registrationRef: params.getParam('registrationRef',
                     ParamType.DocumentReference, false, 'users'),
               ),
