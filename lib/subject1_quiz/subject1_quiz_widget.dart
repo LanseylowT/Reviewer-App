@@ -291,7 +291,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, 0.99),
+                alignment: AlignmentDirectional(-0.05, 1),
                 child: Container(
                   width: 280,
                   height: 54,
@@ -338,121 +338,206 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Align(
-                              alignment: AlignmentDirectional(0, -0.3),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/LetterA.png',
-                                    width: 50,
-                                    height: 50,
-                                    fit: BoxFit.cover,
+                            Expanded(
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF6E7695),
+                                    borderRadius: BorderRadius.circular(20),
                                   ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 0, 0, 0),
-                                      child: Text(
-                                        'An integrated circuit having all the functionality of a central processing unit of a PC.',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                  'assets/images/LetterB.png',
-                                  width: 50,
-                                  height: 50,
-                                  fit: BoxFit.cover,
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    child: Text(
-                                      'It is a  combination of memory, CPU, peripheral devices that are connected to it, and OS (Operating System)',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            color: Colors.white,
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5, 0, 0, 0),
+                                          child: Image.asset(
+                                            'assets/images/LetterA.png',
+                                            width: 50,
+                                            height: 50,
+                                            fit: BoxFit.cover,
                                           ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 0, 0, 0),
+                                            child: Text(
+                                              'An integrated circuit having all the functionality of a central processing unit of a PC.',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.white,
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0, 0.4),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/LetterC.png',
-                                    width: 50,
-                                    height: 50,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 0, 0, 0),
-                                      child: Text(
-                                        'Input and output devices like keyboard mouse, printer scanner, etc',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0, 1),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/LetterD.png',
-                                    width: 50,
-                                    height: 50,
-                                    fit: BoxFit.cover,
+                            Expanded(
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 9),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFEB4E4E),
+                                    borderRadius: BorderRadius.circular(20),
                                   ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 0, 0, 0),
-                                      child: Text(
-                                        'It is a named location that stores information or data permanently',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            5, 0, 0, 0),
+                                        child: Image.asset(
+                                          'assets/images/LetterB.png',
+                                          width: 50,
+                                          height: 50,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10, 0, 0, 0),
+                                          child: Text(
+                                            'It is a  combination of memory, CPU, peripheral devices that are connected to it, and OS (Operating System)',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: Colors.white,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF6E7695),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5, 0, 0, 0),
+                                          child: Image.asset(
+                                            'assets/images/LetterD.png',
+                                            width: 50,
+                                            height: 50,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 0, 0, 0),
+                                            child: Text(
+                                              'It is a named location that stores information or data permanently',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.white,
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF6E7695),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5, 0, 0, 0),
+                                          child: Image.asset(
+                                            'assets/images/LetterC.png',
+                                            width: 50,
+                                            height: 50,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 0, 0, 0),
+                                            child: Text(
+                                              'Input and output devices like keyboard mouse, printer scanner, etc',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.white,
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ],

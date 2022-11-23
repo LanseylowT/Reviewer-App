@@ -145,35 +145,49 @@ class _QuizPageWidgetState extends State<QuizPageWidget> {
                           Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(10, 40, 10, 0),
-                            child: ListTile(
-                              title: Text(
-                                'CCE 109',
-                                style: FlutterFlowTheme.of(context)
-                                    .title3
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: Color(0xFF40DF9F),
+                            child: InkWell(
+                              onTap: () async {
+                                context.pushNamed(
+                                  'Subject1Quiz',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType: PageTransitionType.fade,
+                                      duration: Duration(milliseconds: 200),
                                     ),
+                                  },
+                                );
+                              },
+                              child: ListTile(
+                                title: Text(
+                                  'CCE 109',
+                                  style: FlutterFlowTheme.of(context)
+                                      .title3
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: Color(0xFF40DF9F),
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  'Fundamentals of Programming',
+                                  style: FlutterFlowTheme.of(context)
+                                      .subtitle2
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Color(0xFF6E7695),
+                                  size: 20,
+                                ),
+                                tileColor: Color(0xFFF5F5F5),
+                                dense: false,
+                                contentPadding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                               ),
-                              subtitle: Text(
-                                'Fundamentals of Programming',
-                                style: FlutterFlowTheme.of(context)
-                                    .subtitle2
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                    ),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_forward_ios,
-                                color: Color(0xFF6E7695),
-                                size: 20,
-                              ),
-                              tileColor: Color(0xFFF5F5F5),
-                              dense: false,
-                              contentPadding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                             ),
                           ),
                           Padding(
