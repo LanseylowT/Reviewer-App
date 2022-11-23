@@ -114,6 +114,13 @@ flutter:
     - family: 'SF Pro Display'
       fonts:
         - asset: assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf
+    - family: 'Glacial Indifference'
+      fonts:
+        - asset: assets/fonts/GlacialIndifference-Regular.otf
+        - asset: assets/fonts/GlacialIndifference-Italic.otf
+          style: italic
+        - asset: assets/fonts/GlacialIndifference-Bold.otf
+          weight: 700
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

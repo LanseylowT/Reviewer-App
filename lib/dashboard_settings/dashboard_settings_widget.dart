@@ -132,107 +132,118 @@ class _DashboardSettingsWidgetState extends State<DashboardSettingsWidget> {
                     children: [
                       Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Color(0x00FFFFFF),
-                            ),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
-                              },
-                              text: 'Home',
-                              icon: Icon(
-                                Icons.home_rounded,
-                                size: 20,
-                              ),
-                              options: FFButtonOptions(
-                                width: 130,
-                                height: 40,
-                                color: Color(0x004B39EF),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                    ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
+                          Expanded(
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0.1),
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  context.pushNamed(
+                                    'DashboardHome',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 300),
+                                      ),
+                                    },
+                                  );
+                                },
+                                text: 'Home',
+                                icon: Icon(
+                                  Icons.home_rounded,
+                                  size: 20,
                                 ),
-                                borderRadius: BorderRadius.circular(8),
+                                options: FFButtonOptions(
+                                  height: 40,
+                                  color: Color(0xFF373D55),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .subtitle2
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: Colors.white,
+                                        fontSize: 10,
+                                      ),
+                                  elevation: 0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
                               ),
                             ),
                           ),
-                          Container(
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Color(0x00FFFFFF),
-                            ),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
-                              },
-                              text: 'Update',
-                              icon: Icon(
-                                Icons.update_rounded,
-                                size: 20,
-                              ),
-                              options: FFButtonOptions(
-                                width: 130,
-                                height: 40,
-                                color: Color(0x004B39EF),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                    ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
+                          Expanded(
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0.15),
+                              child: FFButtonWidget(
+                                onPressed: () {
+                                  print('Button pressed ...');
+                                },
+                                text: 'Update',
+                                icon: Icon(
+                                  Icons.update_rounded,
+                                  size: 20,
                                 ),
-                                borderRadius: BorderRadius.circular(8),
+                                options: FFButtonOptions(
+                                  height: 40,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 7, 0),
+                                  color: Color(0xFF373D55),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .subtitle2
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: Colors.white,
+                                        fontSize: 10,
+                                      ),
+                                  elevation: 0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
                               ),
                             ),
                           ),
-                          Container(
-                            width: 105,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Color(0x00FFFFFF),
-                            ),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
-                              },
-                              text: 'Settings',
-                              icon: Icon(
-                                Icons.settings,
-                                size: 20,
-                              ),
-                              options: FFButtonOptions(
-                                width: 135,
-                                height: 40,
-                                color: Color(0x004B39EF),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 8,
+                          Expanded(
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0.15),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
+                                child: FFButtonWidget(
+                                  onPressed: () {
+                                    print('Button pressed ...');
+                                  },
+                                  text: 'Settings',
+                                  icon: Icon(
+                                    Icons.settings,
+                                    size: 20,
+                                  ),
+                                  options: FFButtonOptions(
+                                    height: 40,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 7, 0),
+                                    color: Color(0xFF373D55),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 8,
+                                        ),
+                                    elevation: 0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
                                     ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
                                 ),
-                                borderRadius: BorderRadius.circular(8),
                               ),
                             ),
                           ),
