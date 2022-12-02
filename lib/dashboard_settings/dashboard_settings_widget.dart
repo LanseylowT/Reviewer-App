@@ -4,7 +4,6 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DashboardSettingsWidget extends StatefulWidget {
@@ -55,72 +54,8 @@ class _DashboardSettingsWidgetState extends State<DashboardSettingsWidget> {
                   fit: BoxFit.cover,
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Expanded(
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0x00101213),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(-0.75, -0.05),
-                        child: SelectionArea(
-                            child: Text(
-                          '9:40',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: 'Poppins',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                              ),
-                        )),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0x00FFFFFF),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.signal_cellular_alt,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 24,
-                            ),
-                            Icon(
-                              Icons.wifi_rounded,
-                              color:
-                                  FlutterFlowTheme.of(context).primaryBtnText,
-                              size: 24,
-                            ),
-                            FaIcon(
-                              FontAwesomeIcons.batteryHalf,
-                              color:
-                                  FlutterFlowTheme.of(context).primaryBtnText,
-                              size: 24,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               Align(
-                alignment: AlignmentDirectional(0, 1),
+                alignment: AlignmentDirectional(0, 0.95),
                 child: Container(
                   width: 335,
                   height: 59,
@@ -254,271 +189,310 @@ class _DashboardSettingsWidgetState extends State<DashboardSettingsWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -0.7),
-                child: Container(
-                  width: 303.38,
-                  height: 39,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF41436A),
-                    borderRadius: BorderRadius.circular(21.94),
-                  ),
-                  child: TextFormField(
-                    controller: textController,
-                    onChanged: (_) => EasyDebounce.debounce(
-                      'textController',
-                      Duration(milliseconds: 2000),
-                      () => setState(() {}),
-                    ),
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      hintText: 'Search',
-                      hintStyle: FlutterFlowTheme.of(context).bodyText2,
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                      errorBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                      focusedErrorBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                      prefixIcon: Icon(
-                        Icons.search_rounded,
-                        color: Color(0xFF6E7695),
-                      ),
-                      suffixIcon: textController!.text.isNotEmpty
-                          ? InkWell(
-                              onTap: () async {
-                                textController?.clear();
-                                setState(() {});
-                              },
-                              child: Icon(
-                                Icons.clear,
-                                color: Color(0xFF757575),
-                                size: 22,
-                              ),
-                            )
-                          : null,
-                    ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
-                          color: Color(0xFF6E7695),
-                          lineHeight: 1,
-                        ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(0, 0.45),
+                alignment: AlignmentDirectional(0, -0.15),
                 child: Container(
                   width: 288,
-                  height: 506,
+                  height: 600,
                   decoration: BoxDecoration(
-                    color: Color(0x00FFFFFF),
+                    color: Color(0x002D3142),
+                    borderRadius: BorderRadius.circular(25),
                   ),
-                  child: ListView(
-                    padding: EdgeInsets.zero,
-                    scrollDirection: Axis.vertical,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.check,
-                            color: Color(0xFF499D2F),
+                      Align(
+                        alignment: AlignmentDirectional(0, -0.7),
+                        child: Container(
+                          width: 303.38,
+                          height: 39,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF41436A),
+                            borderRadius: BorderRadius.circular(21.94),
                           ),
-                          title: Text(
-                            'General Settings',
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                          child: TextFormField(
+                            controller: textController,
+                            onChanged: (_) => EasyDebounce.debounce(
+                              'textController',
+                              Duration(milliseconds: 2000),
+                              () => setState(() {}),
+                            ),
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              hintText: 'Search',
+                              hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
                                 ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              errorBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedErrorBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.search_rounded,
+                                color: Color(0xFF6E7695),
+                              ),
+                              suffixIcon: textController!.text.isNotEmpty
+                                  ? InkWell(
+                                      onTap: () async {
+                                        textController?.clear();
+                                        setState(() {});
+                                      },
+                                      child: Icon(
+                                        Icons.clear,
+                                        color: Color(0xFF757575),
+                                        size: 22,
+                                      ),
+                                    )
+                                  : null,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF6E7695),
+                                      lineHeight: 1,
+                                    ),
+                            textAlign: TextAlign.center,
                           ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.account_circle,
-                            color: Color(0xFF499D2F),
+                      Align(
+                        alignment: AlignmentDirectional(0, 0.45),
+                        child: Container(
+                          width: 288,
+                          height: 506,
+                          decoration: BoxDecoration(
+                            color: Color(0x00FFFFFF),
                           ),
-                          title: Text(
-                            'Account',
-                            textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            scrollDirection: Axis.vertical,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.check,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'General Settings',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
                                 ),
-                          ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.notifications_active,
-                            color: Color(0xFF499D2F),
-                          ),
-                          title: Text(
-                            'Notifications',
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.account_circle,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'Account',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
                                 ),
-                          ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.app_registration,
-                            color: Color(0xFF499D2F),
-                          ),
-                          title: Text(
-                            'Appearance',
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.notifications_active,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'Notifications',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
                                 ),
-                          ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.security_sharp,
-                            color: Color(0xFF499D2F),
-                          ),
-                          title: Text(
-                            'Privacy & Security',
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.app_registration,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'Appearance',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
                                 ),
-                          ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.healing,
-                            color: Color(0xFF499D2F),
-                          ),
-                          title: Text(
-                            'Help & Support',
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.security_sharp,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'Privacy & Security',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
                                 ),
-                          ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.bookmark,
-                            color: Color(0xFF499D2F),
-                          ),
-                          title: Text(
-                            'About',
-                            style: FlutterFlowTheme.of(context).title3.override(
-                                  fontFamily: 'Manrope',
-                                  color: Colors.white,
-                                  fontSize: 15,
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.healing,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'Help & Support',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
                                 ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.bookmark,
+                                    color: Color(0xFF499D2F),
+                                  ),
+                                  title: Text(
+                                    'About',
+                                    style: FlutterFlowTheme.of(context)
+                                        .title3
+                                        .override(
+                                          fontFamily: 'Manrope',
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Color(0xFF6E7695),
+                                    size: 20,
+                                  ),
+                                  tileColor: Color(0x00F5F5F5),
+                                  dense: false,
+                                ),
+                              ),
+                            ],
                           ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xFF6E7695),
-                            size: 20,
-                          ),
-                          tileColor: Color(0x00F5F5F5),
-                          dense: false,
                         ),
                       ),
                     ],

@@ -2,7 +2,6 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Registration1Widget extends StatefulWidget {
@@ -49,66 +48,6 @@ class _Registration1WidgetState extends State<Registration1Widget> {
               width: 200,
               height: 200,
               fit: BoxFit.cover,
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Expanded(
-                  child: Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Color(0x00101213),
-                    ),
-                    child: Align(
-                      alignment: AlignmentDirectional(-0.75, -0.05),
-                      child: SelectionArea(
-                          child: Text(
-                        '9:40',
-                        textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Poppins',
-                              color: FlutterFlowTheme.of(context).primaryText,
-                            ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Color(0x00FFFFFF),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.signal_cellular_alt,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 24,
-                          ),
-                          Icon(
-                            Icons.wifi_rounded,
-                            color: FlutterFlowTheme.of(context).primaryBtnText,
-                            size: 24,
-                          ),
-                          FaIcon(
-                            FontAwesomeIcons.batteryHalf,
-                            color: FlutterFlowTheme.of(context).primaryBtnText,
-                            size: 24,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
             ),
             Align(
               alignment: AlignmentDirectional(0, -0.2),
