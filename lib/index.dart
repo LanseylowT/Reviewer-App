@@ -9,3 +9,4 @@ export 'dashboard_settings/dashboard_settings_widget.dart'
     show DashboardSettingsWidget;
 export 'quiz_page/quiz_page_widget.dart' show QuizPageWidget;
 export 'subject1_quiz/subject1_quiz_widget.dart' show Subject1QuizWidget;
+export 'subject2_quiz/subject2_quiz_widget.dart' show Subject2QuizWidget;

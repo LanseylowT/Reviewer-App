@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -7,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class Subject1QuizWidget extends StatefulWidget {
-  const Subject1QuizWidget({
+class Subject2QuizWidget extends StatefulWidget {
+  const Subject2QuizWidget({
     Key? key,
     this.registrationRef,
   }) : super(key: key);
@@ -16,10 +15,10 @@ class Subject1QuizWidget extends StatefulWidget {
   final DocumentReference? registrationRef;
 
   @override
-  _Subject1QuizWidgetState createState() => _Subject1QuizWidgetState();
+  _Subject2QuizWidgetState createState() => _Subject2QuizWidgetState();
 }
 
-class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
+class _Subject2QuizWidgetState extends State<Subject2QuizWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -52,7 +51,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -0.9),
+                alignment: AlignmentDirectional(0, -0.95),
                 child: Container(
                   width: double.infinity,
                   height: 130,
@@ -66,7 +65,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
                               padding:
@@ -79,7 +78,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                               ),
                             ),
                             Text(
-                              'Fundamentals of Programming',
+                              'Understanding the Self',
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -89,29 +88,6 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                     fontSize: 18,
                                   ),
                             ),
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30,
-                              borderWidth: 1,
-                              buttonSize: 60,
-                              icon: Icon(
-                                Icons.cancel_outlined,
-                                color: Colors.white,
-                                size: 30,
-                              ),
-                              onPressed: () async {
-                                context.pushNamed(
-                                  'QuizPage',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType: PageTransitionType.fade,
-                                      duration: Duration(milliseconds: 200),
-                                    ),
-                                  },
-                                );
-                              },
-                            ),
                           ],
                         ),
                       ),
@@ -120,7 +96,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -0.4),
+                alignment: AlignmentDirectional(0, -0.55),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                   child: Container(
@@ -205,7 +181,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -0.3),
+                alignment: AlignmentDirectional(0, -0.33),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
                   child: Container(
@@ -216,7 +192,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                     ),
                     alignment: AlignmentDirectional(0, 0.050000000000000044),
                     child: Text(
-                      '1. What is a computer system?',
+                      '1.  It refers to the access of adolescents to them which can easily literature related to sexuality, \nsexual crimes, and the violence that affect their perception and attitudes toward sexuality.\n',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Poppins',
                             color: Colors.white,
@@ -309,7 +285,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10, 0, 0, 0),
                                             child: Text(
-                                              'An integrated circuit having all the functionality of a central processing unit of a PC.',
+                                              'Social or Environmental Factors',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1
@@ -334,7 +310,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                   width: double.infinity,
                                   height: 100,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFEB4E4E),
+                                    color: Color(0xFF6E7695),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Row(
@@ -357,7 +333,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   10, 0, 0, 0),
                                           child: Text(
-                                            'It is a  combination of memory, CPU, peripheral devices that are connected to it, and OS (Operating System)',
+                                            'Personality or temperament',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
@@ -407,7 +383,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10, 0, 0, 0),
                                             child: Text(
-                                              'It is a named location that stores information or data permanently',
+                                              'Hormones',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1
@@ -432,7 +408,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                   width: double.infinity,
                                   height: 100,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF6E7695),
+                                    color: Color(0xFFEB4E4E),
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Align(
@@ -459,7 +435,7 @@ class _Subject1QuizWidgetState extends State<Subject1QuizWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10, 0, 0, 0),
                                             child: Text(
-                                              'Input and output devices like keyboard mouse, printer scanner, etc',
+                                              'Media and Internet',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1

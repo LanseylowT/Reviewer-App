@@ -143,6 +143,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 registrationRef: params.getParam('registrationRef',
                     ParamType.DocumentReference, false, 'users'),
               ),
+            ),
+            FFRoute(
+              name: 'Subject2Quiz',
+              path: 'subject2Quiz',
+              builder: (context, params) => Subject2QuizWidget(
+                registrationRef: params.getParam('registrationRef',
+                    ParamType.DocumentReference, false, 'users'),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

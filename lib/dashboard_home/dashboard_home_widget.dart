@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -148,23 +147,11 @@ class _DashboardHomeWidgetState extends State<DashboardHomeWidget> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(40),
         child: AppBar(
-          backgroundColor: Color(0xFF30444E),
-          automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30,
-            borderWidth: 1,
-            buttonSize: 30,
-            icon: FaIcon(
-              FontAwesomeIcons.bars,
-              color: Color(0xFF6E7695),
-              size: 30,
-            ),
-            onPressed: () {
-              print('IconButton pressed ...');
-            },
-          ),
+          backgroundColor: Color(0x002D3142),
+          iconTheme: IconThemeData(color: Colors.white),
+          automaticallyImplyLeading: true,
           actions: [],
+          centerTitle: true,
           elevation: 0,
         ),
       ),
